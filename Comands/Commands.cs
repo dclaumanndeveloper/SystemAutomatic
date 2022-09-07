@@ -9,14 +9,8 @@ namespace SystemAutomatic.Comands
 {
     public class Commands
     {
-        public static List<String> Comandos;
+        //public static List<String> Comandos;
 
-        public static List<String>  GetCommands()
-        {
-            Comandos = new List<String>();
-            Comandos.Add("Jarvis");
-            return Comandos;
-        }
         public static String RetornoComando(string comandoEnviado)
         {
             if (comandoEnviado.Contains("Jarvis"))

@@ -155,9 +155,14 @@ namespace SystemAutomatic.Comands
             {
                 Process.Start(new ProcessStartInfo { FileName = @"C:\Program Files\Bitdefender\Bitdefender Security\seccenter.exe", UseShellExecute = true });
             }
-            else if (comandoEnviado.Contains("abra o obs"))
+            else if (comandoEnviado.Contains("desligar"))
             {
-                Process.Start(new ProcessStartInfo { FileName = @"C:\Program Files\obs-studio\bin\64bit\obs64.exe", UseShellExecute = true });
+                // Process.Start(new ProcessStartInfo { FileName = @"C:\Program Files\obs-studio\bin\64bit\obs64.exe", UseShellExecute = true });
+                ProcessStartInfo psi = new ProcessStartInfo();
+                psi.FileName = "shutdown.exe";
+                psi.Arguments = "-s -f -t 0";
+                psi.CreateNoWindow = true;
+                Process p = Process.Start(psi);
             }
             else if (comandoEnviado.Contains("abra o github"))
             {
@@ -171,6 +176,19 @@ namespace SystemAutomatic.Comands
             {
                 Process.Start(new ProcessStartInfo { FileName = @"https://www.google.com.br/maps", UseShellExecute = true });
             }
+            else if (comandoEnviado.Contains("abra o discord"))
+            {
+                Process.Start(new ProcessStartInfo { FileName = @"https://discordapp.com", UseShellExecute = true });
+            }
+            else if (comandoEnviado.Contains("abra o calendário"))
+            {
+                Process.Start(new ProcessStartInfo { FileName = @"https://calendar.google.com", UseShellExecute = true });
+            }
+            else if (comandoEnviado.Contains("abra o meet"))
+            {
+                Process.Start(new ProcessStartInfo { FileName = @"https://meet.google.com", UseShellExecute = true });
+            }
+
             return "Ok";
             
             

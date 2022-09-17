@@ -28,7 +28,7 @@ namespace SystemAutomatic.Comands
             {
                 return "Hoje é: " + DateTime.Now.ToLongDateString() + "";
             }
-            else if (comandoEnviado.Contains("abra o navegador"))
+            else if (comandoEnviado.Contains("navegador"))
             {
                 Process.Start(new ProcessStartInfo { FileName = @"http://google.com", UseShellExecute = true });
             }
@@ -151,7 +151,6 @@ namespace SystemAutomatic.Comands
             }
             else if (comandoEnviado.Contains("desligar"))
             {
-                // Process.Start(new ProcessStartInfo { FileName = @"C:\Program Files\obs-studio\bin\64bit\obs64.exe", UseShellExecute = true });
                 ProcessStartInfo psi = new ProcessStartInfo();
                 psi.FileName = "shutdown.exe";
                 psi.Arguments = "-s -f -t 0";
@@ -181,6 +180,70 @@ namespace SystemAutomatic.Comands
             else if (comandoEnviado.Contains("meet"))
             {
                 Process.Start(new ProcessStartInfo { FileName = @"https://meet.google.com", UseShellExecute = true });
+            }
+            else if (comandoEnviado.Contains("onedrive"))
+            {
+                Process.Start(new ProcessStartInfo { FileName = @"https://onedrive.live.com", UseShellExecute = true });
+            }
+            else if (comandoEnviado.Contains("magazine"))
+            {
+                Process.Start(new ProcessStartInfo { FileName = @"https://magazineluiza.com.br", UseShellExecute = true });
+            }
+            else if (comandoEnviado.Contains("inventiva"))
+            {
+                Process.Start(new ProcessStartInfo { FileName = @"https://inventivaapps.com.br", UseShellExecute = true });
+            }
+            else if (comandoEnviado.Contains("heavy"))
+            {
+                Process.Start(new ProcessStartInfo { FileName = @"https://heavyhost.com.br", UseShellExecute = true });
+            }
+            else if (comandoEnviado.Contains("microsoft"))
+            {
+                Process.Start(new ProcessStartInfo { FileName = @"https://microsoft.com", UseShellExecute = true });
+            }
+            else if (comandoEnviado.Contains("apple"))
+            {
+                Process.Start(new ProcessStartInfo { FileName = @"https://apple.com", UseShellExecute = true });
+            }
+            else if (comandoEnviado.Contains("shoppe"))
+            {
+                Process.Start(new ProcessStartInfo { FileName = @"https://shoppe.com", UseShellExecute = true });
+            }
+            else if (comandoEnviado.Contains("telegram"))
+            {
+                Process.Start(new ProcessStartInfo { FileName = @"https://web.telegram.org/k/", UseShellExecute = true });
+            }
+            else if (comandoEnviado.Contains("gov"))
+            {
+                Process.Start(new ProcessStartInfo { FileName = @"https://gov.br", UseShellExecute = true });
+            }
+            else if (comandoEnviado.Contains("twitch"))
+            {
+                Process.Start(new ProcessStartInfo { FileName = @"https://twitch.tv", UseShellExecute = true });
+            }
+            else if (comandoEnviado.Contains("kabum"))
+            {
+                Process.Start(new ProcessStartInfo { FileName = @"https://kabum.com.br", UseShellExecute = true });
+            }
+            else if (comandoEnviado.Contains("netshoes"))
+            {
+                Process.Start(new ProcessStartInfo { FileName = @"https://netshoes.com.br", UseShellExecute = true });
+            }
+            else if (comandoEnviado.Contains("centauro"))
+            {
+                Process.Start(new ProcessStartInfo { FileName = @"https://centauro.com.br", UseShellExecute = true });
+            }
+            else if (comandoEnviado.Contains("muffato"))
+            {
+                Process.Start(new ProcessStartInfo { FileName = @"https://supermufatto.com.br", UseShellExecute = true });
+            }
+            else if (comandoEnviado.Contains("condor"))
+            {
+                Process.Start(new ProcessStartInfo { FileName = @"https://condor.com.br", UseShellExecute = true });
+            }
+            else if (comandoEnviado.Contains("canção"))
+            {
+                Process.Start(new ProcessStartInfo { FileName = @"https://cancao.com", UseShellExecute = true });
             }
             return "Ok";
         }
